@@ -1,25 +1,44 @@
 # sourced-footage-reel
 
-**Turn one topic from a text document into a 60-second vertical reel — using only the vendor's
-own official footage.** No generated imagery, no avatar, no voiceover. If a topic has no public
-official video, the topic is dropped; that is a boundary, not a failure.
+**The problem:** short videos about technology topics usually need footage nobody has — so they
+end up with stock clips that don't match, or AI-generated imagery that can't be trusted for a
+factual claim. Meanwhile the companies being discussed publish good footage of their own
+products, and it sits unused.
 
-The repo is a **method**, not an application: eight steps, two mandatory human checkpoints,
-and an incident log of everything that broke the first two times it ran.
+**What this does:** it reads a text source, finds the topics that have public *official* vendor
+footage, and cuts one into a 60-second vertical reel. Nothing is generated — no imagery, no
+avatar, no voiceover. If a topic has no public official video, the topic is dropped; that is a
+boundary, not a failure.
+
+![架構圖](docs/architecture.png)
 
 ---
 
-## 這是什麼
+## 要解決的問題
+
+技術題材的短影音,素材通常沒人有。於是兩條路都不好走:
+
+- **用素材庫的通用畫面** — 畫面跟講的東西對不上,觀眾看得出來
+- **用 AI 生圖** — 一個關於真實產品的事實主張,配一張生成的圖,那張圖本身沒有可信度
+
+**而被討論的那家公司,自己就在官網放著品質很好的產品影片,沒人用。**
+
+## 這個工作台怎麼解
 
 讀一篇文字來源(例如財經晨報),從裡面挑出**有公開官方影片可用**的技術題材,
 取得那支素材,剪成固定版面的 9:16 直式短影音,配上自寫中文字幕與整片固定的三行大標。
 
-一支成品長這樣:60.0 秒、1080×1920、10 個鏡頭各 6 秒、20 段字幕、
-保留素材原聲(正規化到 −16 LUFS)。
+一支成品:**60.0 秒、1080×1920、10 個鏡頭各 6 秒、20 段字幕**,
+保留素材原聲並正規化到 −16 LUFS。
 
 **刻意不做**:不生成任何畫面(無 AI 生圖、無生成式 B-roll)、不做主播或虛擬人、
-不做多支素材混剪、不做旁白配音。**字幕與素材原聲刻意各自獨立**——
-素材是英文原聲,字幕是中文自寫,兩者不對齊也不翻譯。
+不做多支素材混剪、不做旁白配音。
+
+**字幕與素材原聲刻意各自獨立**——素材是英文原聲,字幕是中文自寫,兩者不對齊也不翻譯。
+那不是偷懶:硬做中文配音會蓋掉原廠的產品演示聲,而硬翻字幕會讓字幕受制於原片的敘事節奏。
+
+**找不到公開官方素材的題材就不做。** 那是邊界,不是失敗——
+這條線的價值建立在「畫面是真的、而且是原廠自己拍的」。
 
 ## 怎麼跑
 

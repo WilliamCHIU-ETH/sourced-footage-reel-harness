@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<title>sourced-footage-reel 架構</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#F7F8FA;font-family:'Geist','Noto Sans TC',sans-serif}.wrap{max-width:1320px;margin:0 auto;padding:2rem}svg{width:100%;height:auto;display:block}</style>
+</head><body><div class="wrap">
+<svg viewBox="0 0 1272 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sfr-arch-title sfr-arch-desc">
+<title id="sfr-arch-title">sourced-footage-reel 架構</title>
+<desc id="sfr-arch-desc">一篇財經晨報經過選題、取素材、選鏡寫稿、組裝渲染成為 60 秒直式短影音；只用廠商官方素材，不生成任何畫面；兩處需要人判斷：題材與素材的挑選，以及成片驗收。</desc>
+<defs>
+  <marker id="a" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4A6285"/></marker>
+  <marker id="aa" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#E8A200"/></marker>
+  <marker id="as" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#8798AE"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8FA"/>
+
+<!-- 規格與方法 bar -->
+<rect x="176" y="32" width="896" height="56" rx="6" fill="rgba(9,39,90,0.03)" stroke="rgba(9,39,90,0.20)" stroke-width="1"/>
+<rect x="192" y="26" width="76" height="12" rx="2" fill="#F7F8FA"/>
+<text x="230" y="35" fill="rgba(9,39,90,0.45)" font-size="8" font-family="'Geist Mono',monospace" text-anchor="middle" letter-spacing="0.14em">規格與方法</text>
+<text x="276" y="58" fill="#09275A" font-size="12" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">唯一入口</text>
+<text x="276" y="76" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">SKILL.md 八步＋兩個 gate</text>
+<text x="596" y="58" fill="#09275A" font-size="12" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">會走死路的限制</text>
+<text x="596" y="76" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">ASSUMPTIONS.md 環境・工具・憑證</text>
+<text x="908" y="58" fill="#09275A" font-size="12" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">踩過的坑</text>
+<text x="908" y="76" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">RECIPE.md 刻意不留上次的答案</text>
+
+<!-- zone -->
+<rect x="176" y="128" width="896" height="160" rx="8" fill="rgba(9,39,90,0.02)" stroke="rgba(9,39,90,0.10)" stroke-width="0.8"/>
+<rect x="192" y="132" width="168" height="12" rx="2" fill="#F7F8FA"/>
+<text x="276" y="141" fill="rgba(9,39,90,0.40)" font-size="7" font-family="'Geist Mono',monospace" text-anchor="middle" letter-spacing="0.14em">工作台 · 三支機械 script</text>
+
+<!-- 主流程 -->
+<line x1="160" y1="208" x2="188" y2="208" stroke="#4A6285" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="360" y1="208" x2="380" y2="208" stroke="#4A6285" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="480" y1="208" x2="500" y2="208" stroke="#4A6285" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="672" y1="208" x2="692" y2="208" stroke="#4A6285" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="864" y1="208" x2="884" y2="208" stroke="#4A6285" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="1056" y1="208" x2="1076" y2="208" stroke="#4A6285" stroke-width="1.2" marker-end="url(#a)"/>
+
+<!-- 虛線 -->
+<line x1="276" y1="88" x2="276" y2="156" stroke="#8798AE" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#as)"/>
+<line x1="780" y1="88" x2="780" y2="156" stroke="#8798AE" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#as)"/>
+<line x1="972" y1="352" x2="972" y2="260" stroke="#8798AE" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#as)"/>
+
+<!-- 節點 -->
+<rect x="32" y="160" width="128" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="32" y="160" width="128" height="96" rx="6" fill="rgba(74,98,133,0.10)" stroke="#8798AE" stroke-width="1"/>
+<rect x="40" y="168" width="36" height="12" rx="2" fill="none" stroke="rgba(135,152,174,0.5)" stroke-width="0.8"/>
+<text x="58" y="177" fill="#4A6285" font-size="7" font-family="'Geist Mono',monospace" text-anchor="middle" letter-spacing="0.08em">INPUT</text>
+<text x="96" y="212" fill="#09275A" font-size="14" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">財經晨報</text>
+<text x="96" y="234" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">.docx</text>
+
+<rect x="192" y="160" width="168" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="192" y="160" width="168" height="96" rx="6" fill="#ffffff" stroke="#09275A" stroke-width="1"/>
+<text x="276" y="196" fill="#09275A" font-size="14" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">選題</text>
+<text x="276" y="218" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">哪個題材有公開官方影片</text>
+<text x="276" y="238" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">沒有就不做</text>
+
+<rect x="384" y="160" width="96" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="384" y="160" width="96" height="96" rx="6" fill="rgba(255,212,0,0.18)" stroke="#E8A200" stroke-width="1.2"/>
+<text x="432" y="196" fill="#B07800" font-size="8" font-family="'Geist Mono',monospace" text-anchor="middle" letter-spacing="0.10em">GATE 1</text>
+<text x="432" y="222" fill="#09275A" font-size="13" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">核准</text>
+<text x="432" y="242" fill="#8A6400" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">題材與素材</text>
+
+<rect x="504" y="160" width="168" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="504" y="160" width="168" height="96" rx="6" fill="#ffffff" stroke="#09275A" stroke-width="1"/>
+<text x="588" y="196" fill="#09275A" font-size="14" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">取素材</text>
+<text x="588" y="218" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">音軌正規化 −16 LUFS</text>
+<text x="588" y="238" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">bin/prep-footage.sh</text>
+
+<rect x="696" y="160" width="168" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="696" y="160" width="168" height="96" rx="6" fill="#ffffff" stroke="#09275A" stroke-width="1"/>
+<text x="780" y="196" fill="#09275A" font-size="14" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">選鏡與寫稿</text>
+<text x="780" y="218" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">10 鏡 × 6 秒・三行大標</text>
+<text x="780" y="238" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">20 段中文字幕（自寫）</text>
+
+<rect x="888" y="160" width="168" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="888" y="160" width="168" height="96" rx="6" fill="#ffffff" stroke="#09275A" stroke-width="1"/>
+<text x="972" y="196" fill="#09275A" font-size="14" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">組裝與渲染</text>
+<text x="972" y="218" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">固定版面 composition</text>
+<text x="972" y="238" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">bin/init-project.sh</text>
+
+<rect x="1080" y="160" width="160" height="96" rx="6" fill="#F7F8FA"/>
+<rect x="1080" y="160" width="160" height="96" rx="6" fill="rgba(255,212,0,0.18)" stroke="#E8A200" stroke-width="1.2"/>
+<text x="1160" y="188" fill="#B07800" font-size="8" font-family="'Geist Mono',monospace" text-anchor="middle" letter-spacing="0.10em">GATE 2 · OUTPUT</text>
+<text x="1160" y="214" fill="#09275A" font-size="14" font-weight="600" font-family="'Noto Sans TC',sans-serif" text-anchor="middle">成片驗收</text>
+<text x="1160" y="236" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace" text-anchor="middle">1080×1920  60.0s</text>
+
+<!-- 量規 bar -->
+<rect x="176" y="352" width="896" height="56" rx="6" fill="rgba(232,162,0,0.05)" stroke="rgba(232,162,0,0.45)" stroke-width="1"/>
+<rect x="192" y="346" width="44" height="12" rx="2" fill="#F7F8FA"/>
+<text x="214" y="355" fill="#B07800" font-size="8" font-family="'Geist Mono',monospace" text-anchor="middle" letter-spacing="0.14em">量規</text>
+<text x="220" y="378" fill="#09275A" font-size="12" font-weight="600" font-family="'Noto Sans TC',sans-serif">機械驗證：解析度・時長・幀數・整體響度・逐段有聲</text>
+<text x="220" y="396" fill="#4A6285" font-size="9" font-family="'Geist Mono',monospace">bin/verify-render.sh  ·  判斷性的檢查（選鏡品質、字幕對不對得上）在 VERIFY.md，不假裝能自動化</text>
+
+<!-- legend -->
+<line x1="32" y1="452" x2="1240" y2="452" stroke="rgba(9,39,90,0.10)" stroke-width="0.8"/>
+<text x="32" y="472" fill="#4A6285" font-size="8" font-family="'Geist Mono',monospace" letter-spacing="0.14em">LEGEND</text>
+<line x1="128" y1="468" x2="164" y2="468" stroke="#4A6285" stroke-width="1.2"/>
+<text x="172" y="472" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif">產製流程</text>
+<line x1="264" y1="468" x2="300" y2="468" stroke="#8798AE" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="308" y="472" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif">規格與量規在旁支援，不在流程上</text>
+<rect x="580" y="461" width="16" height="14" rx="3" fill="rgba(255,212,0,0.18)" stroke="#E8A200" stroke-width="1.2"/>
+<text x="604" y="472" fill="#4A6285" font-size="10" font-family="'Noto Sans TC',sans-serif">兩處需要人判斷：題材與素材的挑選、成片驗收</text>
+</svg>
+</div></body></html>
