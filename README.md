@@ -1,27 +1,16 @@
 # sourced-footage-reel
 
-**The problem:** short videos about technology topics usually need footage nobody has — so they
-end up with stock clips that don't match, or AI-generated imagery that can't be trusted for a
-factual claim. Meanwhile the companies being discussed publish good footage of their own
-products, and it sits unused.
+**要解決的問題**:技術題材的短影音,素材通常沒人有。用素材庫的通用畫面,
+畫面跟講的東西對不上;用 AI 生圖,一個關於真實產品的事實主張配一張生成的圖,
+那張圖本身沒有可信度。**而被討論的那家公司,自己就在官網放著品質很好的產品影片,沒人用。**
 
-**What this does:** it reads a text source, finds the topics that have public *official* vendor
-footage, and cuts one into a 60-second vertical reel. Nothing is generated — no imagery, no
-avatar, no voiceover. If a topic has no public official video, the topic is dropped; that is a
-boundary, not a failure.
+**這個工作台做的事**:讀一篇文字來源,挑出**有公開官方影片可用**的技術題材,
+取得那支素材,剪成 60 秒的 9:16 直式短影音。**什麼都不生成**——不生圖、不做主播、不做旁白。
+找不到公開官方素材的題材就不做:**那是邊界,不是失敗。**
 
 ![架構圖](docs/architecture.png)
 
 ---
-
-## 要解決的問題
-
-技術題材的短影音,素材通常沒人有。於是兩條路都不好走:
-
-- **用素材庫的通用畫面** — 畫面跟講的東西對不上,觀眾看得出來
-- **用 AI 生圖** — 一個關於真實產品的事實主張,配一張生成的圖,那張圖本身沒有可信度
-
-**而被討論的那家公司,自己就在官網放著品質很好的產品影片,沒人用。**
 
 ## 這個工作台怎麼解
 
