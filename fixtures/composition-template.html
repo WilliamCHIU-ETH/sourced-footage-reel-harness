@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{WIDTH}}, height={{HEIGHT}}" />
+    <title>{{TITLE}}</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* 幾何以 1080×1920 為基準。改變畫布尺寸必須等比重算下面每一個 px 值。 */
+      @font-face { font-family: 'BrandTC'; src: url('assets/{{FONT_BOLD_FILE}}') format('truetype'); font-weight: 700; font-display: block; }
+      @font-face { font-family: 'BrandTC'; src: url('assets/{{FONT_REGULAR_FILE}}') format('truetype'); font-weight: 400; font-display: block; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: {{BG_GRADIENT_TO}}; }
+
+      /* 只宣告有 @font-face 的字型；寫未宣告的系統字型會被 lint 判 error */
+      #root {
+        position: relative; width: {{WIDTH}}px; height: {{HEIGHT}}px; overflow: hidden;
+        font-family: 'BrandTC', sans-serif;
+        background: radial-gradient(1200px 900px at 50% -180px, {{BG_GRADIENT_FROM}} 0%, #07214f 46%, {{BG_GRADIENT_TO}} 100%);
+      }
+      #texture {
+        position: absolute; inset: 0; opacity: 0.5;
+        background-image: radial-gradient(rgba(120, 180, 255, 0.16) 1.5px, transparent 1.6px);
+        background-size: 26px 26px;
+      }
+
+      /* 品牌帶 0–239（靜態） */
+      #brandbar { position: absolute; left: 0; top: 0; width: 1080px; height: 240px; display: grid; place-items: center; }
+      #brandbar img { width: 336px; height: 96px; display: block; }
+
+      /* 素材區 240–1256（動態）。object-fit: cover 會裁掉 16:9 素材約 40% 寬度 */
+      #stage { position: absolute; left: 0; top: 240px; width: 1080px; height: 1017px; overflow: hidden; background: #000; }
+      #stage video { position: absolute; left: 0; top: 0; width: 1080px; height: 1017px; object-fit: cover; }
+      #scrim {
+        position: absolute; left: 0; bottom: 0; width: 1080px; height: 240px;
+        background: linear-gradient(to top, rgba(2, 10, 26, 0.62) 0%, rgba(2, 10, 26, 0.30) 50%, rgba(2, 10, 26, 0) 100%);
+      }
+
+      /* 逐段字幕：疊在素材區內下緣 */
+      .cap { position: absolute; left: 40px; right: 40px; bottom: 34px; text-align: center; }
+      .cap .l {
+        display: block; font-size: 60px; font-weight: 700; line-height: 1.28; color: #ffffff; letter-spacing: 0.5px;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.92), 0 0 3px rgba(0, 0, 0, 0.9);
+      }
+      .cap .hl { color: {{ACCENT}}; }
+
+      /* 大標區 1257–1773（靜態）。約束是 70px 字級下每行不得超過 972px 可用寬，超出會溢出成第四行；
+         字數只是粗估（中文約 13 字，含英文與數字更少），唯一可信的檢查是 snapshot 目視 */
+      #headline { position: absolute; left: 54px; right: 54px; top: 1290px; text-align: center; }
+      #headline .h {
+        display: block; font-size: 70px; font-weight: 700; line-height: 1.62; color: #ffffff; letter-spacing: 1px;
+        -webkit-text-stroke: 7px {{HEADLINE_STROKE}}; paint-order: stroke fill;
+        text-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+      }
+      #headline .h .num { color: {{ACCENT}}; }
+
+      /* 來源標註帶 1774–1919（靜態） */
+      #credit { position: absolute; left: 54px; bottom: 52px; font-size: 30px; font-weight: 400; color: #9fbbe6; letter-spacing: 0.5px; }
+      #topic { position: absolute; right: 54px; bottom: 52px; font-size: 30px; font-weight: 700; color: #6fb2ff; letter-spacing: 1px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0"
+         data-width="{{WIDTH}}" data-height="{{HEIGHT}}" data-duration="{{DURATION}}">
+      <div id="texture"></div>
+      <div id="brandbar"><img src="assets/{{LOGO_FILE}}" alt="" /></div>
+
+      <div id="stage">
+        <!-- 下一行整行替換為 N 段 video。每段一行，id 必須唯一（缺 id 會在 render 時凍結畫面）。
+             格式：<video id="shot-01" src="assets/footage.mp4" data-start="0" data-duration="6"
+                          data-media-start="140" data-track-index="0" muted playsinline></video> -->
+        {{SHOTS}}
+
+        <div id="scrim"></div>
+
+        <!-- 下一行整行替換為 M 段字幕。id 唯一，class 必須含 clip（框架靠它控制可見性）。
+             格式：<div id="cap-01" class="cap clip" data-start="0" data-duration="3" data-track-index="2"><span class="l">第一行</span><span class="l">第二行 <span class="hl">數字</span></span></div> -->
+        {{CAPTIONS}}
+      </div>
+
+      <!-- 下一行整行替換為 N 段 audio，與對應 video 共用相同的三個時間屬性。
+           每個 audio 都必須有 id，缺 id 會被混音器忽略 → 整支靜音。素材無音軌時整行刪掉。
+           格式：<audio id="snd-01" src="assets/audio-normalized.m4a" data-start="0" data-duration="6"
+                        data-media-start="140" data-track-index="10" data-volume="1"></audio> -->
+      {{AUDIO}}
+
+      <div id="headline">
+        <span class="h">{{HEADLINE_LINE_1}}</span>
+        <span class="h">{{HEADLINE_LINE_2}}</span>
+        <span class="h">{{HEADLINE_LINE_3}}</span>
+      </div>
+
+      <div id="credit">{{CREDIT_TEXT}}</div>
+      <div id="topic">{{TOPIC_TAG}}</div>
+    </div>
+
+    <script>
+      // 實測 0.8.3 的 lint 要求這一行，即使 skill 文件說不需要
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // 大標整片固定，只在開場帶一次進場
+      tl.fromTo('#headline .h', { y: 26, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: 0.42, stagger: 0.13, ease: 'power3.out' }, 0.12);
+      tl.fromTo('#credit, #topic', { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 0.4, ease: 'power2.out' }, 0.5);
+      tl.fromTo('#brandbar img', { y: -14, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: 0.45, ease: 'power3.out' }, 0);
+
+      // 每段字幕在自己的入點淡入上移。動的是內層 span，不是 clip 本身
+      // （框架擁有 clip 的可見性，tween 它的 display/visibility 會被 lint 拒絕）
+      document.querySelectorAll('.cap').forEach((cap) => {
+        const at = parseFloat(cap.dataset.start);
+        tl.fromTo(cap.querySelectorAll('.l'), { y: 16, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: 0.16, stagger: 0.05, ease: 'power2.out' }, at);
+      });
+
+      window.__timelines['main'] = tl;
+    </script>
+  </body>
+</html>

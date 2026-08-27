@@ -1,0 +1,17 @@
+{
+  "run_dir": "/tmp/sfr-run-CHANGE-ME",
+  "source_document": {
+    "path": "/absolute/path/to/source.docx",
+    "date_label": "MMDD"
+  },
+  "brand": {
+    "logo_path": "/absolute/path/to/logo.png",
+    "font_bold_path": "/absolute/path/to/font-Bold.ttf",
+    "font_regular_path": "/absolute/path/to/font-Regular.ttf"
+  },
+  "output": {
+    "duration_seconds": 60,
+    "shot_seconds": 6,
+    "caption_seconds": 3
+  }
+}

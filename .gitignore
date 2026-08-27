@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+
+# harness 不帶狀態，產出寫到輸入指定的 run_dir。萬一有人在這裡跑：
+runs/
+*.mp4

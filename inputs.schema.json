@@ -1,0 +1,360 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "sourced-footage-reel inputs",
+  "description": "一支素材搬運型 9:16 短影音的全部輸入。所有隨題材變動的值都在這裡；SKILL.md 不含題材常數。JSON Schema 無法表達的兩條交叉約束由 SKILL.md 的「輸入一致性檢查」負責，違反時要停下來問人：(1) topic 未填時 content 也不該填——content 是 GATE 1 之後才產生的；(2) footage 已填代表呼叫方指定素材，該素材必須與 GATE 1 選定的題材相符。",
+  "type": "object",
+  "required": [
+    "run_dir",
+    "source_document",
+    "brand",
+    "output"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "run_dir": {
+      "type": "string",
+      "description": "所有產出的根目錄（絕對路徑）。harness 資料夾本身不被寫入。"
+    },
+    "source_document": {
+      "type": "object",
+      "description": "題材來源。步驟 1 從這裡抽出技術／產品層級的候選。",
+      "required": [
+        "path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "docx / md / txt 的絕對路徑"
+        },
+        "date_label": {
+          "type": "string",
+          "description": "來源日期標籤，只用於命名與 provenance，例如 0821"
+        }
+      }
+    },
+    "topic": {
+      "type": "object",
+      "description": "題材。未填走 SKILL.md 步驟 1 的入口 A（從來源文件抽候選）；預先填了 name 走入口 B（驗證該題材在來源文件裡有無非價格依據）。兩條路都要過 GATE 1。",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "題材名，用於專案 id 與檔名"
+        },
+        "tag": {
+          "type": "string",
+          "description": "畫面右下角的題材標籤，例如個股名與代號"
+        },
+        "facts": {
+          "type": "array",
+          "description": "允許寫進字幕的事實。兩個合法來源：來源文件的原文（含價格事實），以及素材畫面裡的官方規格。逐條標明出處",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "footage": {
+      "type": "object",
+      "description": "素材來源。三種給法任選一種。",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "yt-dlp 可解析的頁面或播放器 URL"
+        },
+        "brightcove": {
+          "type": "object",
+          "description": "企業影片平台識別碼，從素材頁面公開 DOM 讀出",
+          "additionalProperties": false,
+          "properties": {
+            "account_id": {
+              "type": "string"
+            },
+            "player_id": {
+              "type": "string"
+            },
+            "video_id": {
+              "type": "string"
+            }
+          }
+        },
+        "local_path": {
+          "type": "string",
+          "description": "已在本機的素材檔"
+        },
+        "referer": {
+          "type": "string",
+          "description": "下載時要帶的來源網站，某些平台必需"
+        },
+        "publisher": {
+          "type": "string",
+          "description": "素材發布者名稱，寫進畫面的來源標註與 provenance"
+        },
+        "source_page": {
+          "type": "string",
+          "description": "素材所在的官方頁面，寫進 provenance"
+        },
+        "credit_text": {
+          "type": "string",
+          "description": "畫面底部的來源標註全文，內容含素材發布者名稱。因此它與 footage 同進退：footage 未填時這裡也不該填，否則會在 GATE 1 之前洩漏素材答案。"
+        }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "description": "品牌資產與配色。換品牌只改這裡。",
+      "required": [
+        "logo_path",
+        "font_bold_path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "logo_path": {
+          "type": "string"
+        },
+        "font_bold_path": {
+          "type": "string"
+        },
+        "font_regular_path": {
+          "type": "string"
+        },
+        "bg_gradient_from": {
+          "type": "string",
+          "default": "#123c86"
+        },
+        "bg_gradient_to": {
+          "type": "string",
+          "default": "#04102a"
+        },
+        "headline_stroke": {
+          "type": "string",
+          "default": "#1663c8"
+        },
+        "accent": {
+          "type": "string",
+          "default": "#ffd54a",
+          "description": "數字與重點字的強調色"
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "description": "步驟 4–5 的產物。",
+      "additionalProperties": false,
+      "properties": {
+        "headline": {
+          "type": "array",
+          "description": "三行大標，整片固定。長度以 70px 字級下不超過 972px 可用寬為準（中文約 13 字，含英文與數字更少），唯一可信的檢查是 snapshot 目視三行不溢出。數字用 {{num}}…{{/num}} 包住以套用強調色",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "captions": {
+          "type": "array",
+          "description": "逐段字幕，順序即播出順序",
+          "items": {
+            "type": "object",
+            "required": [
+              "lines"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "lines": {
+                "type": "array",
+                "description": "1–2 行。行長以版面容得下為準（60px 字級單行約 15 個中文字），不設字數下限。唯一硬判準是整片密度每秒 4–5 字",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "maxItems": 2
+              }
+            }
+          }
+        },
+        "shots": {
+          "type": "array",
+          "description": "選鏡結果。timeline 起點由順序與 shot_seconds 推算，只需給素材起點",
+          "items": {
+            "type": "object",
+            "required": [
+              "media_start"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "media_start": {
+                "type": "number",
+                "description": "該段取自素材的第幾秒"
+              },
+              "note": {
+                "type": "string",
+                "description": "這段拍到什麼，選鏡依據"
+              }
+            }
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": [
+        "duration_seconds"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "duration_seconds": {
+          "type": "number",
+          "default": 60
+        },
+        "shot_seconds": {
+          "type": "number",
+          "default": 6,
+          "description": "每段鏡頭長度"
+        },
+        "caption_seconds": {
+          "type": "number",
+          "default": 3,
+          "description": "每段字幕停留秒數"
+        },
+        "width": {
+          "type": "integer",
+          "default": 1080
+        },
+        "height": {
+          "type": "integer",
+          "default": 1920
+        },
+        "fps": {
+          "type": "integer",
+          "default": 30
+        },
+        "target_lufs": {
+          "type": "number",
+          "default": -16,
+          "description": "音軌正規化目標"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "description": "candidates.json 的一筆。這是步驟 2 的產物、不是輸入；放在這裡是為了可機器驗證。整份 candidates.json 是這種物件的陣列。",
+      "required": [
+        "topic",
+        "evidence",
+        "footage_found",
+        "footage"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "type": "string",
+          "description": "候選題材名"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "來源文件裡的非價格原文，逐句。只掃文字層（docx 的 XML 部件）；圖片內的文字不算原文"
+        },
+        "footage_found": {
+          "type": "boolean"
+        },
+        "footage": {
+          "type": "array",
+          "description": "同一候選找到的所有可用素材，全部列出不要自己挑——由 GATE 1 讓人選。footage_found 為 false 時填空陣列。",
+          "items": {
+            "type": "object",
+            "required": [
+              "publisher",
+              "source_page",
+              "platform",
+              "probe"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "publisher": {
+                "type": "string",
+                "description": "素材發布者。可以不是題材主體本身——見 SKILL.md 步驟 2 的界線"
+              },
+              "source_page": {
+                "type": "string"
+              },
+              "platform": {
+                "enum": [
+                  "brightcove",
+                  "vimeo",
+                  "wistia",
+                  "youtube",
+                  "self_hosted",
+                  "direct_file"
+                ],
+                "description": "self_hosted 指廠商自架或第三方影音站台（yt-dlp 走 generic extractor）；direct_file 指直接指向媒體檔的 URL"
+              },
+              "ids": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "description": "平台識別碼。Brightcove 放 account／player／video 三組；找不到素材時 null"
+              },
+              "duration_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "yt-dlp metadata 回報值，不是 ffprobe 實測——GATE 1 之前不下載媒體檔。讀不到時 null"
+              },
+              "width": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "height": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "probe": {
+                "enum": [
+                  "ok",
+                  "metadata_only",
+                  "no_formats",
+                  "known_blocked",
+                  "blocked",
+                  "not_found"
+                ],
+                "description": "ok=解析成功且列得出 format 與最高畫質且無已知平台限制；metadata_only=解析成功但列不出畫質或時長（generic extractor 常見）；no_formats=頁面可讀但無可下載視訊；known_blocked=metadata 讀得到但平台有已知下載限制（見 ASSUMPTIONS 環境限制）；blocked=extractor 直接失敗；not_found=找不到素材頁"
+              },
+              "blocked_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "probe 非 ok 時的原因；ok 時填 null"
+              }
+            }
+          }
+        },
+        "excluded": {
+          "type": "boolean",
+          "description": "true 表示這個候選在依據檢查上成立，但撞到 harness 的範圍邊界而不做（例如來源文件裡的自家產品——本 harness 只用他人官方影片素材）。這種候選仍要留在 candidates.json 留痕，不可改寫成 footage_found: false 假稱找不到素材。"
+        },
+        "excluded_reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "excluded 為 true 時寫明理由；否則 null。"
+        }
+      }
+    }
+  }
+}

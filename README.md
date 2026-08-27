@@ -1,0 +1,102 @@
+# sourced-footage-reel
+
+**Turn one topic from a text document into a 60-second vertical reel — using only the vendor's
+own official footage.** No generated imagery, no avatar, no voiceover. If a topic has no public
+official video, the topic is dropped; that is a boundary, not a failure.
+
+The repo is a **method**, not an application: eight steps, two mandatory human checkpoints,
+and an incident log of everything that broke the first two times it ran.
+
+---
+
+## 這是什麼
+
+讀一篇文字來源(例如財經晨報),從裡面挑出**有公開官方影片可用**的技術題材,
+取得那支素材,剪成固定版面的 9:16 直式短影音,配上自寫中文字幕與整片固定的三行大標。
+
+一支成品長這樣:60.0 秒、1080×1920、10 個鏡頭各 6 秒、20 段字幕、
+保留素材原聲(正規化到 −16 LUFS)。
+
+**刻意不做**:不生成任何畫面(無 AI 生圖、無生成式 B-roll)、不做主播或虛擬人、
+不做多支素材混剪、不做旁白配音。**字幕與素材原聲刻意各自獨立**——
+素材是英文原聲,字幕是中文自寫,兩者不對齊也不翻譯。
+
+## 怎麼跑
+
+harness 不帶狀態,所有產出寫到輸入指定的 `run_dir`,不寫進這個資料夾。
+
+```bash
+cp fixtures/inputs.minimal.json my-run.json   # 填題材、素材、大標、字幕
+bash bin/init-project.sh  my-run.json         # 建 HyperFrames 專案骨架、放品牌資產
+bash bin/prep-footage.sh  my-run.json         # 取素材、音軌正規化、產 contact sheet
+# → 選鏡與剪點是判斷工作，看 SKILL.md 步驟 4
+bash bin/verify-render.sh my-run.json         # 成片機械驗證
+```
+
+三支 script 刻意都是**純機械**的:建骨架、取素材、驗成片。
+**選題、選鏡、寫字幕都不在 script 裡**——那些是判斷,寫在 `SKILL.md` 的文字步驟。
+
+`fixtures/inputs.example.json` 是一支**已完成的成品**,用來對照欄位格式。
+它裡面的絕對路徑指向作者機器上的另一個 repo,clone 下來要自己改。
+
+## 兩個會停下來的地方
+
+整條線只有兩個常態 checkpoint,其餘不確定一律自己判斷後繼續:
+
+| | 停在哪 | 為什麼要人 |
+|---|---|---|
+| **GATE 1** | 題材與素材挑選 | 「哪個題材值得做」與「這支官方影片能不能用」是編輯與授權判斷 |
+| **GATE 2** | 成片驗收 | 選鏡品質與字幕是否對得上畫面,機器量不出來 |
+
+另有一個**條件式**的:選鏡時可用鏡頭撐不起指定片長才觸發——
+片長是呼叫方指定的輸入,不可自行更改。
+
+**理由留到下一個 gate 一併出示,不要每遇到一件不清楚的事就停一次。**
+
+## 怎麼判定做對了
+
+機械部分 `bin/verify-render.sh` 全包(`VERIFY.md` 有完整清單):
+
+| 項目 | 判準 |
+|---|---|
+| 解析度 | 等於輸入的 width × height |
+| 時長 | 與 `duration_seconds` 相差 < 0.1 秒 |
+| 幀數 | 等於 duration × fps |
+| 音訊串流 | 必須存在 |
+| 平均音量 | `mean_volume` 落在 −22 ～ −16 dB |
+| 逐段有聲 | 每段鏡頭中點各量 4 秒,全部不得為靜音 |
+
+**「逐段有聲」是被一次事故逼出來的**:整體響度合格的片子,單一鏡頭仍可能是靜音段。
+
+人眼的部分(選鏡是否對得上字幕、大標是否溢框)列在 `VERIFY.md`,不假裝能自動化。
+
+## 檔案
+
+| 檔案 | 作用 |
+|---|---|
+| `SKILL.md` | **唯一入口**:八個步驟與兩個 gate |
+| `CLAUDE.md` | 給 agent 的開場:任務型態、三件先知道的事 |
+| `ASSUMPTIONS.md` | 環境／工具／憑證／知識假設。**有幾個不知道會走死路的限制** |
+| `inputs.schema.json` | 輸入定義,以及 `$defs.candidate`(步驟 2 產物的欄位與值域) |
+| `VERIFY.md` | 完整判準,含人眼項目 |
+| `bin/` | 三支純機械 script |
+| `fixtures/` | 最小底稿、已完成成品範例、composition 模板 |
+| `RECIPE.md` | 歷次軌跡與踩過的坑 |
+
+## RECIPE.md 為什麼刻意不寫答案
+
+`RECIPE.md` 記錄兩次實際執行的順序、卡住的地方、繞道方式,以及人在哪裡介入——
+**但題材名、素材識別碼、字幕文字都被移除了。**
+
+原因是冷啟動驗收發現:只要 RECIPE 寫著「這份文件的正確候選是 X 與 Y」,
+任何 agent 都能**不讀來源文件**就交出看起來正確的 GATE 1 候選表,驗收因此失效。
+
+所以那份文件只留**方法與現象**。裡面每一則 incident 都附「下次還會遇到嗎」——
+例如 YouTube 匿名下載已失效(需要 PO Token),那是平台端封鎖,不會自己好。
+
+## 要改這份 harness 的話
+
+**再加東西前先問「不寫進去,下一個 agent 會不會做錯」——答案是不會的,就不要加。**
+
+`SKILL.md` 與 `ASSUMPTIONS.md` 是每次必讀的熱路徑,
+它們的**成長速率本身就是一個指標**(上一輪 +7.8%)。

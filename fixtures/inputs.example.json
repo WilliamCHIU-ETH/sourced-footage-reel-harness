@@ -1,0 +1,210 @@
+{
+  "run_dir": "/tmp/sfr-example-run",
+  "source_document": {
+    "path": "/Users/chiu/Downloads/0821_台股晨報.docx",
+    "date_label": "0821"
+  },
+  "topic": {
+    "name": "cpo-optical",
+    "tag": "鼎元 2426",
+    "facts": [
+      "鼎元中長期布局 MicroLED 光通訊及 CPO 應用",
+      "光通訊產品下半年進入放量階段",
+      "規劃投入約 12 億元擴充產能",
+      "昨日股價攻上漲停 74.8 元",
+      "素材畫面官方規格：51.2T 全光 CPO、8 顆 6.4T 矽光子晶粒、取代 128 顆 400G 光模組、光互連功耗省七成"
+    ]
+  },
+  "footage": {
+    "brightcove": {
+      "account_id": "6415665063001",
+      "player_id": "Vh8ALpkmx",
+      "video_id": "6355443950112"
+    },
+    "referer": "https://www.broadcom.com/",
+    "publisher": "Broadcom",
+    "source_page": "https://www.broadcom.com/company/news/resources/videos",
+    "credit_text": "（影片來源：Broadcom 官方影片）"
+  },
+  "brand": {
+    "logo_path": "/Users/chiu/Developer/marketing-video/data/assets/台股晨報/cmoney-logo-white.png",
+    "font_bold_path": "/Users/chiu/Developer/marketing-video/data/assets/fonts/NotoSansTC-Bold.ttf",
+    "font_regular_path": "/Users/chiu/Developer/marketing-video/data/assets/fonts/NotoSansTC-Regular.ttf",
+    "bg_gradient_from": "#123c86",
+    "bg_gradient_to": "#04102a",
+    "headline_stroke": "#1663c8",
+    "accent": "#ffd54a"
+  },
+  "content": {
+    "headline": [
+      "{{num}}128{{/num}} 顆光模組換成 {{num}}8{{/num}} 顆晶片",
+      "CPO 交換機省下 {{num}}7{{/num}} 成功耗",
+      "台股光通訊族群同步走揚"
+    ],
+    "captions": [
+      {
+        "lines": [
+          "AI 資料中心最貴的一筆電",
+          "不是花在運算"
+        ]
+      },
+      {
+        "lines": [
+          "是花在把資料搬來搬去"
+        ]
+      },
+      {
+        "lines": [
+          "機櫃之間靠光模組傳輸",
+          "每一顆都在發熱"
+        ]
+      },
+      {
+        "lines": [
+          "速度越快",
+          "光模組吃掉的電越多"
+        ]
+      },
+      {
+        "lines": [
+          "博通把光引擎",
+          "直接搬到交換晶片旁邊"
+        ]
+      },
+      {
+        "lines": [
+          "這個做法叫共同封裝光學",
+          "業界簡稱 CPO"
+        ]
+      },
+      {
+        "lines": [
+          "光訊號不必再繞到機箱前面"
+        ]
+      },
+      {
+        "lines": [
+          "這是全球第一顆",
+          "51.2T 全光 CPO 交換機"
+        ]
+      },
+      {
+        "lines": [
+          "代號 Bailly"
+        ]
+      },
+      {
+        "lines": [
+          "裡面是八顆",
+          "6.4T 矽光子晶粒"
+        ]
+      },
+      {
+        "lines": [
+          "一台就取代",
+          "128 顆 400G 光模組"
+        ]
+      },
+      {
+        "lines": [
+          "光互連功耗省下七成"
+        ]
+      },
+      {
+        "lines": [
+          "延遲與成本同時壓低"
+        ]
+      },
+      {
+        "lines": [
+          "雷射仍然可插拔",
+          "光連接器可拆換"
+        ]
+      },
+      {
+        "lines": [
+          "壞了不用換掉整台"
+        ]
+      },
+      {
+        "lines": [
+          "這條路確定要走",
+          "台股供應鏈跟著動"
+        ]
+      },
+      {
+        "lines": [
+          "鼎元從 LED 與感測元件",
+          "轉向光通訊"
+        ]
+      },
+      {
+        "lines": [
+          "規劃投入 12 億 擴充產能",
+          "中長期布局 CPO 應用"
+        ]
+      },
+      {
+        "lines": [
+          "昨日鼎元攻上漲停 74.8 元"
+        ]
+      },
+      {
+        "lines": [
+          "光通訊族群同步走揚"
+        ]
+      }
+    ],
+    "shots": [
+      {
+        "media_start": 140,
+        "note": "CPO 交換機俯視，橘色光纖，滿版"
+      },
+      {
+        "media_start": 146,
+        "note": "同機器另一角度"
+      },
+      {
+        "media_start": 20,
+        "note": "人物中景，桌上排列光模組"
+      },
+      {
+        "media_start": 84,
+        "note": "手持 CPO 模組特寫"
+      },
+      {
+        "media_start": 90,
+        "note": "手持模組續"
+      },
+      {
+        "media_start": 44,
+        "note": "雙手持小元件特寫"
+      },
+      {
+        "media_start": 148,
+        "note": "機器俯視"
+      },
+      {
+        "media_start": 108,
+        "note": "人物手持元件"
+      },
+      {
+        "media_start": 160,
+        "note": "人物與背景螢幕產品畫面"
+      },
+      {
+        "media_start": 180,
+        "note": "人物與背景產線畫面"
+      }
+    ]
+  },
+  "output": {
+    "duration_seconds": 60,
+    "shot_seconds": 6,
+    "caption_seconds": 3,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "target_lufs": -16
+  }
+}
