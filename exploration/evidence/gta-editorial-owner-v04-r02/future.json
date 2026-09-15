@@ -1,0 +1,684 @@
+{
+  "proxy_id": "editorial-owner-breadth-v0.4",
+  "record_key": "future",
+  "outlet": "PC Gamer",
+  "requested_url": "https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/",
+  "resolved_url": "https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/",
+  "captured_at": "2026-08-30T13:21:10.324Z",
+  "page": {
+    "documentTitle": "Grand Theft Auto 6 reveal live coverage: breaking down the Netflix 'extended look' event | PC Gamer",
+    "h1": "Grand Theft Auto 6 reveal live coverage: breaking down the Netflix 'extended look' event",
+    "canonical": "https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/",
+    "ogUrl": "https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/",
+    "ogTitle": "Grand Theft Auto 6 reveal live coverage: breaking down the Netflix 'extended look' event",
+    "articlePublishedTime": "2026-08-27T17:30:05Z",
+    "datePublishedMeta": "2026-08-27T17:30:05+00:00",
+    "times": [
+      {
+        "index": 0,
+        "datetime": "2026-08-28T01:42:53Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 1,
+        "datetime": "2026-08-27T17:31:33+00:00",
+        "text": "28 August 2026 at 01:31"
+      },
+      {
+        "index": 2,
+        "datetime": "2026-08-27T17:38:36+00:00",
+        "text": "28 August 2026 at 01:38"
+      },
+      {
+        "index": 3,
+        "datetime": "2026-08-27T18:33:05+00:00",
+        "text": "28 August 2026 at 02:33"
+      },
+      {
+        "index": 4,
+        "datetime": "2026-08-27T19:17:24+00:00",
+        "text": "28 August 2026 at 03:17"
+      },
+      {
+        "index": 5,
+        "datetime": "2026-08-27T19:20:14+00:00",
+        "text": "28 August 2026 at 03:20"
+      },
+      {
+        "index": 6,
+        "datetime": "2026-08-27T19:42:02+00:00",
+        "text": "28 August 2026 at 03:42"
+      },
+      {
+        "index": 7,
+        "datetime": "2026-08-27T19:46:52+00:00",
+        "text": "28 August 2026 at 03:46"
+      },
+      {
+        "index": 8,
+        "datetime": "2026-08-27T19:53:58+00:00",
+        "text": "28 August 2026 at 03:53"
+      },
+      {
+        "index": 9,
+        "datetime": "2026-08-27T20:02:13+00:00",
+        "text": "28 August 2026 at 04:02"
+      },
+      {
+        "index": 10,
+        "datetime": "2026-08-27T20:11:53+00:00",
+        "text": "28 August 2026 at 04:11"
+      },
+      {
+        "index": 11,
+        "datetime": "2026-08-27T20:24:42+00:00",
+        "text": "28 August 2026 at 04:24"
+      },
+      {
+        "index": 12,
+        "datetime": "2026-08-27T20:50:00+00:00",
+        "text": "28 August 2026 at 04:50"
+      },
+      {
+        "index": 13,
+        "datetime": "2026-08-27T21:18:54+00:00",
+        "text": "28 August 2026 at 05:18"
+      },
+      {
+        "index": 14,
+        "datetime": "2026-08-27T21:25:14+00:00",
+        "text": "28 August 2026 at 05:25"
+      },
+      {
+        "index": 15,
+        "datetime": "2026-08-27T21:31:18+00:00",
+        "text": "28 August 2026 at 05:31"
+      },
+      {
+        "index": 16,
+        "datetime": "2026-08-27T23:16:02+00:00",
+        "text": "28 August 2026 at 07:16"
+      },
+      {
+        "index": 17,
+        "datetime": "2026-08-27T23:38:01+00:00",
+        "text": "28 August 2026 at 07:38"
+      },
+      {
+        "index": 18,
+        "datetime": "2026-08-28T00:34:38+00:00",
+        "text": "28 August 2026 at 08:34"
+      },
+      {
+        "index": 19,
+        "datetime": "2026-08-28T01:03:40+00:00",
+        "text": "28 August 2026 at 09:03"
+      },
+      {
+        "index": 20,
+        "datetime": "2026-08-28T01:42:55+00:00",
+        "text": "28 August 2026 at 09:42"
+      },
+      {
+        "index": 21,
+        "datetime": "2026-08-28T20:14:00.053Z",
+        "text": "1 day ago"
+      },
+      {
+        "index": 22,
+        "datetime": "2026-08-27T22:10:50.099Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 23,
+        "datetime": "2026-08-28T00:07:59.335Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 24,
+        "datetime": "2026-08-29T15:50:27.640Z",
+        "text": "21 hrs ago"
+      },
+      {
+        "index": 25,
+        "datetime": "2026-08-27T22:02:06.999Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 26,
+        "datetime": "2026-08-27T21:13:40.046Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 27,
+        "datetime": "2026-08-28T09:41:02.945Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 28,
+        "datetime": "2026-08-28T13:11:48.360Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 29,
+        "datetime": "2026-08-27T20:53:22.588Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 30,
+        "datetime": "2026-08-27T20:34:18.872Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 31,
+        "datetime": "2026-08-27T21:13:47.098Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 32,
+        "datetime": "2026-08-27T21:30:42.957Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 33,
+        "datetime": "2026-08-27T20:27:36.428Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 34,
+        "datetime": "2026-08-27T20:01:50.783Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 35,
+        "datetime": "2026-08-27T19:23:32.907Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 36,
+        "datetime": "2026-08-27T19:59:29.370Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 37,
+        "datetime": "2026-08-27T20:54:09.195Z",
+        "text": "2 days ago"
+      },
+      {
+        "index": 38,
+        "datetime": "2026-08-27T18:43:48.550Z",
+        "text": "2 days ago"
+      }
+    ],
+    "jsonLdDateHits": [
+      {
+        "scriptIndex": 0,
+        "type": "LiveBlogPosting",
+        "datePublished": "2026-08-27T17:30:05+00:00"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "NewsArticle",
+        "datePublished": "2026-08-27T17:30:05+00:00"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T17:31:33.557Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T17:38:36.978Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T18:33:05.845Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T19:17:24.976Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T19:20:14.456Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T19:42:02.218Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T19:46:52.166Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T19:53:58.179Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T20:02:13.214Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T20:11:53.477Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T20:24:42.410Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T20:50:00.895Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T21:18:54.895Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T21:25:14.313Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T21:31:18.269Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T23:16:02.713Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-27T23:38:01.851Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-28T00:34:38.888Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-28T01:03:40.551Z"
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "datePublished": "2026-08-28T01:42:55.770Z"
+      }
+    ],
+    "jsonLdPublisherHits": [
+      {
+        "scriptIndex": 0,
+        "type": "LiveBlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "NewsArticle",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      },
+      {
+        "scriptIndex": 0,
+        "type": "BlogPosting",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PC Gamer",
+          "url": "https://www.pcgamer.com",
+          "logo": {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "vanilla.futurecdn.net/pcgamer/media/img/pcgamer_logo.svg",
+            "caption": "PC Gamer logo"
+          }
+        }
+      }
+    ],
+    "ownerPattern": "Future Publishing Limited",
+    "ownerIndex": 2346593,
+    "ownerSnippet": "8bc3d78\">Advertise with us</a>\n</li>\n<li class=\"min-h-8\">\n<a class=\"text-inherit hover:underline hover:underline-offset-2\" href=\"https://futureplc.com/accessibility-statement/\" data-mrf-link=\"https://futureplc.com/accessibility-statement/\" cmp-ltrk=\"footer\" cmp-ltrk-idx=\"8\" mrfobservableid=\"805fb720-fe8c-456d-80f7-423a73a1ff00\">Accessibility Statement</a>\n</li>\n<li class=\"min-h-8\">\n<a class=\"text-inherit hover:underline hover:underline-offset-2\" href=\"https://futureplc.com/careers/\" target=\"_blank\" data-mrf-link=\"https://futureplc.com/careers/\" cmp-ltrk=\"footer\" cmp-ltrk-idx=\"9\" mrfobservableid=\"eba4c944-7d63-406e-8b1a-3d03c9b0e383\">Careers</a>\n</li>\n</ul>\n</nav>\n<p class=\"leading-normal\">©\nFuture Publishing Limited Quay House, The Ambury,\nBath\nBA1 1UA. All rights reserved. England and Wales company registration number 2008885. </p>\n</section>\n</footer>\n<script>\nwindow.vanL10N = null;\n</script>\n<script>\nvar dfp_config = {\n\"site_platform\": \"vanilla\",\n\"keywords\": \"type_news,channel_gaming_software,exclude-from-syndication,exclude-from-yahoo,serversidehawk,Gamescom 2026,Rockstar,Grand Theft Auto 6\",\n\"bordeaux_keywords\": \"Gamescom 2026,Rockstar\",\n\"author\": \"Tyler Wilde\",\n\"template\": \"live-report\",\n\"sponsored\": \"\",\n\"article_id\": \"v6coZ6dXoYWGN79XRs2yJk\",\n\"vanilla_article_id\": \"v6coZ6dXoYWGN79XRs2yJk\",\n\"page_type\": \"news\",\n\"product_brand\": \"\",\n\"product_category\": \"Game\",\n\"product\": \"Grand Theft Auto 6\",\n\"vertical\": \"\",\n\"category\": \"Games\",\n\"child_category\": \"Action\",\n\"grandchild_category\": \"Grand Theft Auto\",\n\"source\": \"\",\n\"provertical\": \"\",\n\"platform\": \"\",\n\"genre\": \"\",\n\"games\": \"\",\n\"brand\": \"\",\n\"jwplayer\": \"carousel\"\n}\n</script>\n<!-- document assets - added by the article itself -->\n<script>\nwindow.vanilla.addJs(\n{\"id\":\"main-js\",\"src\":\"https:\\/\\/vanilla.futurecdn.net\\/pcgame",
+    "htmlLength": 3059419
+  },
+  "extraction_paths": {
+    "title": [
+      "h1",
+      "meta[property=\"og:title\"]",
+      "document.title"
+    ],
+    "canonical": [
+      "link[rel=\"canonical\"]",
+      "meta[property=\"og:url\"]"
+    ],
+    "publish_time": [
+      "meta[property=\"article:published_time\"]",
+      "meta[name=\"datePublished\"]",
+      "meta[name=\"pub_date\"]",
+      "meta[name=\"date\"]",
+      "time[datetime]",
+      "script[type=\"application/ld+json\"] datePublished"
+    ],
+    "parent_owner": "document.documentElement.outerHTML literal search: Future Publishing Limited"
+  },
+  "raw_snippet_file": "future.owner-snippet.html",
+  "raw_snippet_sha256": "603fe8032d551bb9da7d5e7854d575757379a45f32088f9bb0218a5111a0908f"
+}

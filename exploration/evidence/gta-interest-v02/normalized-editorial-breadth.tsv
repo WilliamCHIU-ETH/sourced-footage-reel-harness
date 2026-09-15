@@ -1,0 +1,3 @@
+item	outlet	expected_parent_owner	url	captured_at	fetch_status	curl_exit	raw_body_present	published_at	within_window	owner_locator	independence_status
+B01-pcgamer	PC Gamer	Future	https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/	2026-08-30T12:46:51Z	NOT_RUN_STOP_AFTER_A01	NOT_RUN	false		UNKNOWN		NOT_VALIDATED
+B02-pcgamesn	PCGamesN	Network N	https://www.pcgamesn.com/grand-theft-auto-iv/new-extended-look	2026-08-30T12:46:51Z	NOT_RUN_STOP_AFTER_A01	NOT_RUN	false		UNKNOWN		NOT_VALIDATED

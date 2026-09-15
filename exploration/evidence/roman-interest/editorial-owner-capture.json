@@ -1,0 +1,53 @@
+{
+  "captured_at": "2026-08-31T02:53:35Z",
+  "event_anchor": "2026-08-30T11:26:00Z",
+  "window_end": "2026-09-01T11:26:00Z",
+  "lock_ref": "exploration/2026-08-31-roman-interest-proxy-premeasurement.md",
+  "lock_sha256": "8dc97b7754279c57de425d62f9ae44ffe323692aca683ae1e8d66dedf041c5f8",
+  "included": [
+    {
+      "independence_key": "associated-press",
+      "parent_owner": "The Associated Press",
+      "publication": "AP News",
+      "author": "Marcia Dunn",
+      "published_at": "2026-08-30T11:28:33Z",
+      "url": "https://apnews.com/article/nasa-nancy-grace-roman-space-telescope-2a8e59d0b4e4884966a3b50a159ab8c9",
+      "basis": "AP-hosted original bylined launch report; describes liftoff and successful separation, not a NASA release mirror",
+      "timestamp_source": "public search result metadata",
+      "within_window": true
+    },
+    {
+      "independence_key": "prisa:elpais",
+      "parent_owner": "PRISA / El Pais",
+      "publication": "El Pais Ciencia",
+      "author": "Patricia Fernandez de Lis",
+      "published_at": "2026-08-30T11:27:00Z",
+      "displayed_time": "2026-08-30 13:27 CEST",
+      "url": "https://elpais.com/ciencia/2026-08-30/lanzado-con-exito-el-telescopio-nancy-grace-roman-que-observara-cien-veces-mas-cielo-que-el-hubble.html",
+      "basis": "bylined science report with original explanation and an interview quote explicitly attributed to El Pais",
+      "timestamp_source": "article page",
+      "within_window": true
+    }
+  ],
+  "excluded_or_not_counted": [
+    {
+      "publication": "Nature",
+      "url": "https://www.nature.com/articles/d41586-026-02727-7",
+      "reason": "original bylined report, but the public page exposed only the date 2026-08-30, not an exact time; not needed for the threshold"
+    },
+    {
+      "publication": "Cadena SER",
+      "url": "https://cadenaser.com/nacional/2026/08/30/la-nasa-pone-en-orbita-el-nancy-grace-roman-el-observatorio-panoramico-mas-grande-jamas-construido-cadena-ser/",
+      "reason": "page is explicitly credited to EFE; excluded from canonical owner count to avoid treating a wire mirror as Cadena SER original coverage"
+    },
+    {
+      "publication": "Space.com",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/nasa-roman-space-telescope-launch-success-on-a-spacex-falcon-heavy-rocket-spectacular-launch-video",
+      "reason": "substantive original coverage found, but exact publish time was not exposed on the public article result; not needed for the threshold"
+    }
+  ],
+  "distinct_included_parent_owners": 2,
+  "threshold": 2,
+  "proxy_b_status": "PASS",
+  "limitation": "editorial attention is not audience demand or a Taiwan/Instagram outcome"
+}

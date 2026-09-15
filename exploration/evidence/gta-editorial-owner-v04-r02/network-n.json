@@ -1,0 +1,66 @@
+{
+  "proxy_id": "editorial-owner-breadth-v0.4",
+  "record_key": "network-n",
+  "outlet": "PCGamesN",
+  "requested_url": "https://www.pcgamesn.com/grand-theft-auto-iv/new-extended-look",
+  "resolved_url": "https://www.pcgamesn.com/grand-theft-auto-iv/new-extended-look",
+  "captured_at": "2026-08-30T13:24:13.662Z",
+  "page": {
+    "documentTitle": "Everything new we know about GTA 6, after Netflix's extended look",
+    "h1": "Everything new we know about GTA 6, after Netflix's extended look",
+    "canonical": "https://www.pcgamesn.com/grand-theft-auto-iv/new-extended-look",
+    "ogUrl": "https://www.pcgamesn.com/grand-theft-auto-iv/new-extended-look",
+    "ogTitle": "Everything new we know about GTA 6, after Netflix's extended look",
+    "articlePublishedTime": "2026-08-27T19:35:04Z",
+    "datePublishedMeta": null,
+    "times": [
+      {
+        "index": 0,
+        "datetime": "2026-08-27T19:35:04Z",
+        "text": "August 27, 2026"
+      }
+    ],
+    "jsonLdDateHits": [
+      {
+        "scriptIndex": 0,
+        "type": "NewsArticle",
+        "datePublished": "2026-08-27T19:35:04Z"
+      }
+    ],
+    "jsonLdPublisherHits": [
+      {
+        "scriptIndex": 0,
+        "type": "NewsArticle",
+        "publisher": {
+          "@id": "https://www.pcgamesn.com/#news-media-organization"
+        }
+      }
+    ],
+    "ownerPattern": "Network N Media",
+    "ownerIndex": 310179,
+    "ownerSnippet": "</div></div>    </div>\n</div>    </div>\n</aside>\n<div class=\"js_ifs_placeholder articles_container\">\n<div class=\"loading\"><div class=\"loading-text\"></div>\n<svg class=\"spinner\" viewBox=\"0 0 50 50\"><circle class=\"path\" cx=\"25\" cy=\"25\" r=\"20\" fill=\"none\" stroke-width=\"5\"></circle></svg>\n</div>\n</div>\n</div>\n<footer id=\"colophon\" class=\"site-footer\">\n<div class=\"site-info\">\n<div class=\"footer-col-1\">\n<a class=\"footer-logo\" href=\"https://www.pcgamesn.com/\" title=\"PCGamesN - PCGamesN.com brings you the latest PC games news, first.\" style=\"background-image: url(https://www.pcgamesn.com/wp-content/themes/legion-elite/public/images/pcgamesn/pcgamesn.svg);\">PCGamesN</a>\n<span class=\"copyright\">© 2026 Network N Media Ltd. All rights reserved</span>\n</div>\n<div class=\"footer-col-2\">\n<div class=\"footer-socials\">\n<span>Find us on</span>\n<div>\n<a href=\"https://discord.com/invite/uXSgphH4yH\" title=\"Discord\" target=\"_blank\" rel=\"noopener\"><img src=\"https://www.pcgamesn.com/wp-content/themes/legion-elite/public/images/pcgamesn/social-icons/discord.svg\" alt=\"Discord\" width=\"40\" height=\"40\" loading=\"lazy\"></a>\n<a href=\"https://www.facebook.com/PCGamesNetwork\" title=\"Facebook\" target=\"_blank\" rel=\"noopener\"><img src=\"https://www.pcgamesn.com/wp-content/themes/legion-elite/public/images/pcgamesn/social-icons/facebook.svg\" alt=\"Facebook\" width=\"40\" height=\"40\" loading=\"lazy\"></a>\n<a href=\"https://x.com/intent/follow?screen_name=PCGamesN&amp;tw_p=followbutton\" title=\"X\" target=\"_blank\" rel=\"noopener\"><img src=\"https://www.pcgamesn.com/wp-content/themes/legion-elite/public/images/pcgamesn/social-icons/x.svg\" alt=\"X\" width=\"40\" height=\"40\" loading=\"lazy\"></a>\n<a href=\"https://www.instagram.com/pcgamesn/\" title=\"Instagram\" target=\"_blank\" rel=\"noopener\"><img src=\"https://www.pcgamesn.com/wp-conte",
+    "htmlLength": 417541
+  },
+  "extraction_paths": {
+    "title": [
+      "h1",
+      "meta[property=\"og:title\"]",
+      "document.title"
+    ],
+    "canonical": [
+      "link[rel=\"canonical\"]",
+      "meta[property=\"og:url\"]"
+    ],
+    "publish_time": [
+      "meta[property=\"article:published_time\"]",
+      "meta[name=\"datePublished\"]",
+      "meta[name=\"pub_date\"]",
+      "meta[name=\"date\"]",
+      "time[datetime]",
+      "script[type=\"application/ld+json\"] datePublished"
+    ],
+    "parent_owner": "document.documentElement.outerHTML literal search: Network N Media"
+  },
+  "raw_snippet_file": "network-n.owner-snippet.html",
+  "raw_snippet_sha256": "185ab6988d34c4c01c72361e1492cdbbaea0e74362a7108ebdc8168c41590aef"
+}

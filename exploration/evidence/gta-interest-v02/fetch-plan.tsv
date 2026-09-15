@@ -1,0 +1,7 @@
+item	url	header_path	body_path
+A01-1w0c7q5	https://www.reddit.com/comments/1w0c7q5.json?raw_json=1	batch-a/A01-1w0c7q5.headers.txt	batch-a/A01-1w0c7q5.body.json
+A02-1tv49hl	https://www.reddit.com/comments/1tv49hl.json?raw_json=1	batch-a/A02-1tv49hl.headers.txt	batch-a/A02-1tv49hl.body.json
+A03-1vz2o7p	https://www.reddit.com/comments/1vz2o7p.json?raw_json=1	batch-a/A03-1vz2o7p.headers.txt	batch-a/A03-1vz2o7p.body.json
+A04-1w0szr9	https://www.reddit.com/comments/1w0szr9.json?raw_json=1	batch-a/A04-1w0szr9.headers.txt	batch-a/A04-1w0szr9.body.json
+B01-pcgamer	https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/	batch-b/B01-pcgamer.headers.txt	batch-b/B01-pcgamer.body.html
+B02-pcgamesn	https://www.pcgamesn.com/grand-theft-auto-iv/new-extended-look	batch-b/B02-pcgamesn.headers.txt	batch-b/B02-pcgamesn.body.html

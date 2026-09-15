@@ -1,0 +1,46 @@
+{
+  "status": "COMPLETE",
+  "capturedAt": "2026-08-30T12:53:44.940Z",
+  "records": [
+    {
+      "id": "1w0c7q5",
+      "role": "candidate",
+      "commentCount": 1061,
+      "extraction": "shreddit-post@comment-count",
+      "valid": true,
+      "resolvedUrl": "https://www.reddit.com/r/Games/comments/1w0c7q5/grand_theft_auto_vi_an_extended_look/",
+      "permalink": "/r/Games/comments/1w0c7q5/grand_theft_auto_vi_an_extended_look/",
+      "subreddit": "r/Games"
+    },
+    {
+      "id": "1tv49hl",
+      "role": "comparator-1",
+      "commentCount": 1001,
+      "extraction": "shreddit-post@comment-count",
+      "valid": true,
+      "resolvedUrl": "https://www.reddit.com/r/Games/comments/1tv49hl/marvels_wolverine_extended_gameplay_trailer_ps5/",
+      "permalink": "/r/Games/comments/1tv49hl/marvels_wolverine_extended_gameplay_trailer_ps5/",
+      "subreddit": "r/Games"
+    },
+    {
+      "id": "1vz2o7p",
+      "role": "comparator-2",
+      "commentCount": 371,
+      "extraction": "shreddit-post@comment-count",
+      "valid": true,
+      "resolvedUrl": "https://www.reddit.com/r/Games/comments/1vz2o7p/fable_official_quest_gameplay_gamescom_2026/",
+      "permalink": "/r/Games/comments/1vz2o7p/fable_official_quest_gameplay_gamescom_2026/",
+      "subreddit": "r/Games"
+    },
+    {
+      "id": "1w0szr9",
+      "role": "comparator-3",
+      "commentCount": 233,
+      "extraction": "shreddit-post@comment-count",
+      "valid": true,
+      "resolvedUrl": "https://www.reddit.com/r/Games/comments/1w0szr9/fable_official_combat_gameplay_gamescom_2026/",
+      "permalink": "/r/Games/comments/1w0szr9/fable_official_combat_gameplay_gamescom_2026/",
+      "subreddit": "r/Games"
+    }
+  ]
+}

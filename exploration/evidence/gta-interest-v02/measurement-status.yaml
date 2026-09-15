@@ -1,0 +1,29 @@
+measurement_id: gta-interest-v02-20260830T124651Z
+captured_at: 2026-08-30T12:46:51Z
+premeasurement_lock:
+  path: exploration/2026-08-30-gta-interest-proxy-v0.2-premeasurement.md
+  expected_sha256: e683c431966cf9018d687b093af3956d83dadd3da2628367c432c3ec2f3db34b
+  actual_sha256: e683c431966cf9018d687b093af3956d83dadd3da2628367c432c3ec2f3db34b
+  status: PASS
+request_policy:
+  user_agent: sourced-footage-reel-harness-interest-v0.2/1.0 (public evidence audit; no auth or cookies)
+  auth_sent: false
+  cookies_sent: false
+  retry_count: 0
+batch_a:
+  planned_items: 4
+  attempted_items: 1
+  completed_items: 0
+  first_failure: {item: A01-1w0c7q5, curl_exit: 56, http_status: 403}
+  status: FAILED_STOPPED
+batch_b:
+  planned_items: 2
+  attempted_items: 0
+  status: NOT_RUN_STOP_AFTER_A01
+normalized_identity_records: 0
+reddit_comments_proxy: UNKNOWN
+editorial_owner_breadth_proxy: UNKNOWN
+interest_signals: UNKNOWN
+overall_status: UNKNOWN
+story_package_ref: null
+reviewer_ready: false

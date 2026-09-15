@@ -1,0 +1,5 @@
+role	post_id	endpoint	captured_at	fetch_status	curl_exit	http_status	raw_body_present	identity_status	subreddit	title	permalink	created_utc	num_comments
+candidate	1w0c7q5	https://www.reddit.com/comments/1w0c7q5.json?raw_json=1	2026-08-30T12:46:51Z	FETCH_FAILED	56	403	false	NOT_VALIDATED					
+comparator_1	1tv49hl	https://www.reddit.com/comments/1tv49hl.json?raw_json=1	2026-08-30T12:46:51Z	NOT_RUN_STOP_AFTER_A01	NOT_RUN		false	NOT_VALIDATED					
+comparator_2	1vz2o7p	https://www.reddit.com/comments/1vz2o7p.json?raw_json=1	2026-08-30T12:46:51Z	NOT_RUN_STOP_AFTER_A01	NOT_RUN		false	NOT_VALIDATED					
+comparator_3	1w0szr9	https://www.reddit.com/comments/1w0szr9.json?raw_json=1	2026-08-30T12:46:51Z	NOT_RUN_STOP_AFTER_A01	NOT_RUN		false	NOT_VALIDATED					
