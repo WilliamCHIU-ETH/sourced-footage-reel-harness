@@ -16,6 +16,18 @@
 git clone https://github.com/WilliamCHIU-ETH/sourced-footage-reel-harness.git
 ```
 
+## 成片長什麼樣
+
+<a href="https://youtu.be/UN6mqKQbtr0"><img src="https://img.youtube.com/vi/UN6mqKQbtr0/oardefault.jpg" width="240" alt="CPO 共同封裝光學｜60 秒成片"></a>
+
+**[用廠商官方影片剪一支 60 秒技術短影音｜CPO 共同封裝光學](https://youtu.be/UN6mqKQbtr0)**　60.0 秒、1080×1920、30fps、10 個鏡頭各 6 秒、20 段字幕，保留素材原聲並正規化到 −16 LUFS。
+畫面全部來自 [Broadcom 官方影片頁](https://www.broadcom.com/company/news/resources/videos)，**沒有任何一格是生成的**；字幕是中文自寫，與英文原聲各自獨立，不翻譯也不對齊。
+
+另一支 [48 秒驗收版](https://youtu.be/2wOfEb2K8SY) 是首次走完全部八個步驟的產物。片長來自輸入的 `duration_seconds`，不是規格放寬。
+
+成片與中間產物都不在這個 repo——harness 不存狀態，產出寫到輸入指定的 `run_dir`。
+這支片的輸入欄位長什麼樣，見 [`fixtures/inputs.example.json`](fixtures/inputs.example.json)。
+
 ## 它怎麼運作
 
 ![架構圖](docs/architecture.png)
