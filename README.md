@@ -34,32 +34,17 @@ git clone https://github.com/WilliamCHIU-ETH/sourced-footage-reel-harness.git
 ```mermaid
 flowchart TB
     source["Input：一篇文字來源"]
-
-    subgraph pickBlock["選題（步驟 1-2）"]
-        direction LR
-        candidates["列題材候選"] --> preflight["preflight 公開官方素材"]
-    end
-
+    pick["選題（步驟 1-2）<br/>列題材候選、preflight 公開官方素材"]
     gate1["GATE 1：核准題材與素材"]
-
-    subgraph produceBlock["製作（步驟 3-6）"]
-        direction LR
-        fetch["建骨架、取素材"] --> shots["選鏡"] --> copy["寫大標與字幕"] --> comp["填 composition"]
-    end
-
-    subgraph checkBlock["驗證與收尾（步驟 7-8）"]
-        direction LR
-        lintcheck["lint、check、抽幀目視"] --> render["render"] --> verify["機械驗證"]
-    end
-
+    produce["製作（步驟 3-6）<br/>建骨架、取素材、選鏡、寫大標與字幕、填 composition"]
+    verify["驗證與收尾（步驟 7-8）<br/>lint、check、抽幀目視、render、機械驗證、寫 PROVENANCE"]
     gate2["GATE 2：成片驗收"]
+    output["Output：60 秒 9:16 MP4"]
 
-    source --> candidates
-    preflight --> gate1
-    gate1 --> fetch
-    comp --> lintcheck
-    verify --> gate2
-    gate2 --> output["Output：60 秒 9:16 MP4"]
+    source --> pick --> gate1 --> produce --> verify --> gate2 --> output
+
+    classDef gate fill:#FFF4D6,stroke:#E8A200,stroke-width:2px,color:#5C3D00
+    class gate1,gate2 gate
 ```
 
 各階段實際做什麼，以及哪些是機器、哪些是人：
